@@ -1,0 +1,9 @@
+*.gcda
+*.gcno
+*.o
+playdom
+*.dSYM/
+player
+projects/larsmich/.DS_Store
+.DS_Store
+*.DS_Store
