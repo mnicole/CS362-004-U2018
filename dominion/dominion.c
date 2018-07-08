@@ -574,11 +574,11 @@ int getCost(int cardNumber) {
 
 void adventurerEffect(int drawntreasure, int currentPlayer, struct gameState *state, int cardDrawn, int temphand[], int z) {
     while (drawntreasure < 2) {
-        if (state->deckCount[currentPlayer] < 1) {//if the deck is empty we need to shuffle discard and add to deck
+        if (state->deckCount[currentPlayer] < 1) { //if the deck is empty we need to shuffle discard and add to deck
             shuffle(currentPlayer, state);
         }
         drawCard(currentPlayer, state);
-        cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
+        cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer] - 1];//top card of hand is most recently drawn card.
         if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
             drawntreasure++;
         else {
@@ -598,7 +598,7 @@ void villageEffect(int currentPlayer, struct gameState *state, int handPos) {
     drawCard(currentPlayer, state);
             
     //+2 Actions
-    state->numActions = state->numActions + 2;
+    state->numActions + 2;
             
     //discard played card from hand
     discardCard(handPos, currentPlayer, state, 0);
@@ -606,12 +606,12 @@ void villageEffect(int currentPlayer, struct gameState *state, int handPos) {
 
 void smithyEffect(int currentPlayer, struct gameState *state, int handPos, int i) {
     //+3 Cards
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i <= 3; i++) {
         drawCard(currentPlayer, state);
     }
-            
+
     //discard card from hand
-    discardCard(handPos, currentPlayer, state, 0);       
+    discardCard(handPos, currentPlayer, state, 0);
 }
 
 void councilRoomEffect(int currentPlayer, struct gameState *state, int i, int handPos) {
@@ -626,7 +626,7 @@ void councilRoomEffect(int currentPlayer, struct gameState *state, int i, int ha
     //Each other player draws a card
     for (i = 0; i < state->numPlayers; i++) {
         if ( i != currentPlayer ) {
-           drawCard(i, state);
+           drawCard(currentPlayer, state);
        }
     }
         
@@ -634,10 +634,11 @@ void councilRoomEffect(int currentPlayer, struct gameState *state, int i, int ha
     discardCard(handPos, currentPlayer, state, 0);
 }
 
+// Trash a card and gain one up to 2+ of the one you're trashing
 int remodelEffect(int currentPlayer, struct gameState *state, int i, int j, int choice1, int choice2, int handPos) {
     j = state->hand[currentPlayer][choice1];  //store card we will trash
 
-    if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice2) ) {
+    if ( (getCost(state->hand[currentPlayer][choice1]) + 2) > getCost(choice1) ) {
         return -1;
     }
 
