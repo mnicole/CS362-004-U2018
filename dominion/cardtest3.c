@@ -26,6 +26,7 @@ int main() {
     int failures = 0;
     int newCards = 0;
     int numToDiscard = 0;
+    int discarded = 1;
 
     int handpos = 0, choice1 = -1, choice2 = -1, choice3 = -1, bonus = 0;
     int seed = 1000;
@@ -54,7 +55,7 @@ int main() {
 
 
     // ----------- TEST 2: playing adventurer gives you +2 treasure cards when the first 2 cards are not treasure cards --------------
-    printf("TEST 2: playing adventurer gives you +2 treasure cards when the first 2 cards are not treasure cards\n");
+    printf("\nTEST 2: playing adventurer gives you +2 treasure cards when the first 2 cards are not treasure cards\n");
 
     // copy the game state to a test case
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -71,7 +72,7 @@ int main() {
 
 
     // ----------- TEST 3: playing adventurer discards the correct cards when the first 2 cards are not treasure cards --------------
-    printf("TEST 3: playing adventurer discards the correct cards when the first 2 cards are not treasure cards\n");
+    printf("\nTEST 3: playing adventurer discards the correct cards when the first 2 cards are not treasure cards\n");
 
     // copy the game state to a test case
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -87,6 +88,18 @@ int main() {
 
     printf("discard count = %d, expected = %d\n", testG.discardCount[thisPlayer], G.discardCount[thisPlayer] + numToDiscard);
     failures += assertTrue(testG.discardCount[thisPlayer], G.discardCount[thisPlayer] + numToDiscard);
+
+
+    // ----------- TEST 4: playing adventurer discards card at end --------------
+    printf("\nTEST 4: discard played adventurer card\n");
+
+    // copy the game state to a test case
+    memcpy(&testG, &G, sizeof(struct gameState));
+    cardEffect(adventurer, choice1, choice2, choice3, &testG, handpos, &bonus);
+
+    printf("played card count = %d, expected = %d\n", testG.playedCardCount, G.playedCardCount + discarded);
+
+    failures += assertTrue(testG.playedCardCount, G.playedCardCount + discarded);
 
 
     // ----------- SUMMARY --------------

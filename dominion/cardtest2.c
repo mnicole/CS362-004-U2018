@@ -56,8 +56,8 @@ int main() {
     failures += assertTrue(testG.deckCount[thisPlayer], G.deckCount[thisPlayer] - newCards + shuffledCards);
 
 
-    // ----------- TEST 2: playing smithy discards hand at end --------------
-    printf("\nTEST 2: discard played hand\n");
+    // ----------- TEST 2: playing smithy discards card at end --------------
+    printf("\nTEST 2: discard played smithy card\n");
 
     // copy the game state to a test case
     memcpy(&testG, &G, sizeof(struct gameState));

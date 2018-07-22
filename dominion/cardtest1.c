@@ -78,8 +78,8 @@ int main() {
     failures += assertTrue(testG.numActions, G.numActions + newActions);
 
 
-    // ----------- TEST 3: playing village discards hand at end --------------
-    printf("\nTEST 3: discard played hand\n");
+    // ----------- TEST 3: playing village discards card at end --------------
+    printf("\nTEST 3: discard played village card\n");
 
     // copy the game state to a test case
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -90,7 +90,7 @@ int main() {
 
 
     // ----------- TEST 4: playing village does not affect other players' hands --------------
-    printf("\nTEST 3: no changes to other players' hands\n");
+    printf("\nTEST 4: no changes to other players' hands\n");
 
     // copy the game state to a test case
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -106,8 +106,8 @@ int main() {
     }
 
 
-    // ----------- TEST 4: playing village does not affect victory card piles --------------
-    printf("\nTEST 4: playing village does not affect victory card piles\n");
+    // ----------- TEST 5: playing village does not affect victory card piles --------------
+    printf("\nTEST 5: playing village does not affect victory card piles\n");
 
     // copy the game state to a test case
     memcpy(&testG, &G, sizeof(struct gameState));

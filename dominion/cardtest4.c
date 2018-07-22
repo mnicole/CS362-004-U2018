@@ -46,7 +46,7 @@ int main() {
 
 
     // ----------- TEST 1: playing council_room gives you +4 cards --------------
-    printf("TEST A: playing council_room gives you +4 cards\n");
+    printf("TEST 1: playing council_room gives you +4 cards\n");
 
     // copy the game state to a test case
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -60,8 +60,8 @@ int main() {
     failures += assertTrue(testG.deckCount[thisPlayer], G.deckCount[thisPlayer] - newCards + shuffledCards);
 
 
-    // ----------- TEST 2: playing council_room discards hand at end --------------
-    printf("\nTEST 2: discard played hand\n");
+    // ----------- TEST 2: playing council_room discards played card at end --------------
+    printf("\nTEST 2: discard played council_room card\n");
 
     // copy the game state to a test case
     memcpy(&testG, &G, sizeof(struct gameState));
@@ -81,6 +81,7 @@ int main() {
 
     printf("num buys = %d, expected = %d\n", testG.numBuys, G.numBuys + 1);
     failures += assertTrue(testG.numBuys, G.numBuys + 1);
+
 
     // ----------- TEST 4: playing council_room adds a card to other players' hands --------------
     printf("\nTEST 4: playing council_room adds a card to other players' hands\n");
