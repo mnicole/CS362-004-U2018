@@ -579,15 +579,17 @@ void adventurerEffect(int drawntreasure, int currentPlayer, struct gameState *st
         }
         drawCard(currentPlayer, state);
         cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer] - 1];//top card of hand is most recently drawn card.
-        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
+        //printf("CARD DRAWN: count %d, card %d \n", state->handCount[currentPlayer], cardDrawn);
+        if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold) {
             drawntreasure++;
+        }
         else {
             temphand[z] = cardDrawn;
             state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
             z++;
         }
     }
-    while(z-1>=0) {
+    while(z - 1 > 0) {
         state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
         z=z-1;
     }
