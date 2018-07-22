@@ -49,16 +49,16 @@ interface.o: interface.h interface.c
 	gcc -c interface.c -g  $(CFLAGS)
 
 unittestresults: cardTest1 cardTest2 cardTest3 cardTest4 unitTest1 unitTest2 unitTest3 unitTest4
-	./cardTest1 >> unittestresult.out
-	./cardTest2 >> unittestresult.out
-	./cardTest3 >> unittestresult.out
-	./cardTest4 >> unittestresult.out
-	./unitTest1 >> unittestresult.out
-	./unitTest2 >> unittestresult.out
-	./unitTest3 >> unittestresult.out
-	./unitTest4 >> unittestresult.out
-	gcov -f -b dominion.c >> unittestresult.out
-	cat dominion.c.gcov >> unittestresult.out
+	./cardTest1 >> unittestresults.out
+	./cardTest2 >> unittestresults.out
+	./cardTest3 >> unittestresults.out
+	./cardTest4 >> unittestresults.out
+	./unitTest1 >> unittestresults.out
+	./unitTest2 >> unittestresults.out
+	./unitTest3 >> unittestresults.out
+	./unitTest4 >> unittestresults.out
+	gcov -f -b dominion.c >> unittestresults.out
+	cat dominion.c.gcov >> unittestresults.out
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
