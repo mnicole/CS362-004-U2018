@@ -1,3 +1,482 @@
+----------------- Testing Card: council_room ----------------
+TEST 1: playing council_room gives you +4 cards
+hand count = 9, expected = 9
+TEST PASSED!
+deck count = 0, expected = 1
+TEST FAILED!
+hand count = 9, expected = 9
+TEST PASSED!
+deck count = 0, expected = 1
+TEST FAILED!
+hand count = 9, expected = 9
+TEST PASSED!
+deck count = 0, expected = 1
+TEST FAILED!
+hand count = 9, expected = 9
+TEST PASSED!
+deck count = 0, expected = 1
+TEST FAILED!
+hand count = 9, expected = 9
+TEST PASSED!
+deck count = 0, expected = 1
+TEST FAILED!
+hand count = 9, expected = 9
+TEST PASSED!
+deck count = 0, expected = 1
+TEST FAILED!
+hand count = 9, expected = 9
+TEST PASSED!
+deck count = 0, expected = 1
+TEST FAILED!
+hand count = 9, expected = 9
+TEST PASSED!
+deck count = 0, expected = 1
+TEST FAILED!
+
+TEST 2: discard played council_room card
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+
+TEST 3: playing council_room gives you +1 buy
+num buys = 2, expected = 2
+TEST PASSED!
+num buys = 2, expected = 2
+TEST PASSED!
+num buys = 2, expected = 2
+TEST PASSED!
+num buys = 2, expected = 2
+TEST PASSED!
+num buys = 2, expected = 2
+TEST PASSED!
+num buys = 2, expected = 2
+TEST PASSED!
+num buys = 2, expected = 2
+TEST PASSED!
+num buys = 2, expected = 2
+TEST PASSED!
+
+TEST 4: playing council_room adds a card to other players' hands
+player 1: hand count = 0, expected = 1
+TEST FAILED!
+player 1: deck count = 10, expected = 9
+TEST FAILED!
+player 1: hand count = 0, expected = 1
+TEST FAILED!
+player 1: deck count = 10, expected = 9
+TEST FAILED!
+player 1: hand count = 0, expected = 1
+TEST FAILED!
+player 1: deck count = 10, expected = 9
+TEST FAILED!
+player 2: hand count = 0, expected = 1
+TEST FAILED!
+player 2: deck count = 10, expected = 9
+TEST FAILED!
+player 3: hand count = 0, expected = 1
+TEST FAILED!
+player 3: deck count = 10, expected = 9
+TEST FAILED!
+player 1: hand count = 0, expected = 1
+TEST FAILED!
+player 1: deck count = 10, expected = 9
+TEST FAILED!
+player 1: hand count = 0, expected = 1
+TEST FAILED!
+player 1: deck count = 10, expected = 9
+TEST FAILED!
+player 1: hand count = 0, expected = 1
+TEST FAILED!
+player 1: deck count = 10, expected = 9
+TEST FAILED!
+player 2: hand count = 0, expected = 1
+TEST FAILED!
+player 2: deck count = 10, expected = 9
+TEST FAILED!
+player 1: hand count = 0, expected = 1
+TEST FAILED!
+player 1: deck count = 10, expected = 9
+TEST FAILED!
+player 2: hand count = 0, expected = 1
+TEST FAILED!
+player 2: deck count = 10, expected = 9
+TEST FAILED!
+player 1: hand count = 0, expected = 1
+TEST FAILED!
+player 1: deck count = 10, expected = 9
+TEST FAILED!
+
+TEST 5: playing council_room does not affect victory card piles
+estate count = 12, expected = 12
+TEST PASSED!
+duchy count = 12, expected = 12
+TEST PASSED!
+province count = 12, expected = 12
+TEST PASSED!
+estate count = 12, expected = 12
+TEST PASSED!
+duchy count = 12, expected = 12
+TEST PASSED!
+province count = 12, expected = 12
+TEST PASSED!
+estate count = 12, expected = 12
+TEST PASSED!
+duchy count = 12, expected = 12
+TEST PASSED!
+province count = 12, expected = 12
+TEST PASSED!
+estate count = 12, expected = 12
+TEST PASSED!
+duchy count = 12, expected = 12
+TEST PASSED!
+province count = 12, expected = 12
+TEST PASSED!
+estate count = 8, expected = 8
+TEST PASSED!
+duchy count = 8, expected = 8
+TEST PASSED!
+province count = 8, expected = 8
+TEST PASSED!
+estate count = 8, expected = 8
+TEST PASSED!
+duchy count = 8, expected = 8
+TEST PASSED!
+province count = 8, expected = 8
+TEST PASSED!
+estate count = 12, expected = 12
+TEST PASSED!
+duchy count = 12, expected = 12
+TEST PASSED!
+province count = 12, expected = 12
+TEST PASSED!
+estate count = 8, expected = 8
+TEST PASSED!
+duchy count = 8, expected = 8
+TEST PASSED!
+province count = 8, expected = 8
+TEST PASSED!
+
+ >>>>> Testing council_room complete, 32 asserts failed <<<<<
+
+----------------- Testing Card: smithy ----------------
+TEST 1: playing smithy gives you +3 cards
+hand count = 8, expected = 7
+TEST FAILED!
+deck count = 1, expected = 2
+TEST FAILED!
+hand count = 8, expected = 7
+TEST FAILED!
+deck count = 1, expected = 2
+TEST FAILED!
+hand count = 8, expected = 7
+TEST FAILED!
+deck count = 1, expected = 2
+TEST FAILED!
+hand count = 8, expected = 7
+TEST FAILED!
+deck count = 1, expected = 2
+TEST FAILED!
+
+TEST 2: discard played smithy card
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+played card count = 1, expected = 1
+TEST PASSED!
+
+TEST 3: no changes to other players' hands
+player 1: hand count = 0, expected = 0
+TEST PASSED!
+player 1: deck count = 10, expected = 10
+TEST PASSED!
+player 2: hand count = 0, expected = 0
+TEST PASSED!
+player 2: deck count = 10, expected = 10
+TEST PASSED!
+player 3: hand count = 0, expected = 0
+TEST PASSED!
+player 3: deck count = 10, expected = 10
+TEST PASSED!
+player 1: hand count = 0, expected = 0
+TEST PASSED!
+player 1: deck count = 10, expected = 10
+TEST PASSED!
+player 1: hand count = 0, expected = 0
+TEST PASSED!
+player 1: deck count = 10, expected = 10
+TEST PASSED!
+player 2: hand count = 0, expected = 0
+TEST PASSED!
+player 2: deck count = 10, expected = 10
+TEST PASSED!
+player 3: hand count = 0, expected = 0
+TEST PASSED!
+player 3: deck count = 10, expected = 10
+TEST PASSED!
+player 1: hand count = 0, expected = 0
+TEST PASSED!
+player 1: deck count = 10, expected = 10
+TEST PASSED!
+
+TEST 4: playing smithy does not affect victory card piles
+estate count = 12, expected = 12
+TEST PASSED!
+duchy count = 12, expected = 12
+TEST PASSED!
+province count = 12, expected = 12
+TEST PASSED!
+estate count = 12, expected = 12
+TEST PASSED!
+duchy count = 12, expected = 12
+TEST PASSED!
+province count = 12, expected = 12
+TEST PASSED!
+estate count = 12, expected = 12
+TEST PASSED!
+duchy count = 12, expected = 12
+TEST PASSED!
+province count = 12, expected = 12
+TEST PASSED!
+estate count = 8, expected = 8
+TEST PASSED!
+duchy count = 8, expected = 8
+TEST PASSED!
+province count = 8, expected = 8
+TEST PASSED!
+
+ >>>>> Testing smithy complete, 8 asserts failed <<<<<
+
+----------------- Testing Card: adventurer ----------------
+TEST 1: playing adventurer gives you +2 treasure cards when the first 2 cards are treasure cards
+hand count = 7, expected = 7
+TEST PASSED!
+hand count = 7, expected = 7
+TEST PASSED!
+hand count = 7, expected = 7
+TEST PASSED!
+hand count = 7, expected = 7
+TEST PASSED!
+
+TEST 2: playing adventurer gives you +2 treasure cards when the first 2 cards are not treasure cards
+hand count = 7, expected = 7
+TEST PASSED!
+hand count = 7, expected = 7
+TEST PASSED!
+hand count = 7, expected = 7
+TEST PASSED!
+hand count = 7, expected = 7
+TEST PASSED!
+
+TEST 3: playing adventurer discards the correct cards when the first 2 cards are not treasure cards
+discard count = 0, expected = 2
+TEST FAILED!
+discard count = 0, expected = 2
+TEST FAILED!
+discard count = 0, expected = 2
+TEST FAILED!
+discard count = 0, expected = 2
+TEST FAILED!
+
+TEST 4: discard played adventurer card
+played card count = 0, expected = 1
+TEST FAILED!
+played card count = 0, expected = 1
+TEST FAILED!
+played card count = 0, expected = 1
+TEST FAILED!
+played card count = 0, expected = 1
+TEST FAILED!
+
+TEST 5: playing adventurer with an empty deck discards correct cards 
+played card count = 0, expected = 1
+TEST FAILED!
+played card count = 0, expected = 1
+TEST FAILED!
+played card count = 0, expected = 1
+TEST FAILED!
+played card count = 0, expected = 1
+TEST FAILED!
+
+ >>>>> Testing adventurer complete, 12 asserts failed <<<<<
+
+Function 'compare'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 4
+Taken at least once:100.00% of 4
+No calls
+
+Function 'newGame'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function 'kingdomCards'
+Lines executed:0.00% of 12
+No branches
+No calls
+
+Function 'initializeGame'
+Lines executed:89.61% of 77
+Branches executed:95.65% of 46
+Taken at least once:82.61% of 46
+No calls
+
+Function 'shuffle'
+Lines executed:100.00% of 17
+Branches executed:100.00% of 8
+Taken at least once:100.00% of 8
+No calls
+
+Function 'playCard'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+No calls
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+No calls
+
+Function 'numHandCards'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function 'handCard'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function 'supplyCount'
+Lines executed:0.00% of 1
+No branches
+No calls
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 11
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+No calls
+
+Function 'whoseTurn'
+Lines executed:100.00% of 1
+No branches
+No calls
+
+Function 'endTurn'
+Lines executed:0.00% of 22
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+No calls
+
+Function 'isGameOver'
+Lines executed:0.00% of 12
+Branches executed:0.00% of 8
+Taken at least once:0.00% of 8
+No calls
+
+Function 'scoreFor'
+Lines executed:0.00% of 26
+Branches executed:0.00% of 42
+Taken at least once:0.00% of 42
+No calls
+
+Function 'getWinners'
+Lines executed:0.00% of 33
+Branches executed:0.00% of 22
+Taken at least once:0.00% of 22
+No calls
+
+Function 'drawCard'
+Lines executed:70.83% of 24
+Branches executed:100.00% of 6
+Taken at least once:66.67% of 6
+No calls
+
+Function 'getCost'
+Lines executed:0.00% of 30
+Branches executed:0.00% of 28
+Taken at least once:0.00% of 28
+No calls
+
+Function 'adventurerEffect'
+Lines executed:100.00% of 16
+Branches executed:100.00% of 12
+Taken at least once:83.33% of 12
+No calls
+
+Function 'villageEffect'
+Lines executed:0.00% of 4
+No branches
+No calls
+
+Function 'smithyEffect'
+Lines executed:100.00% of 5
+Branches executed:100.00% of 2
+Taken at least once:100.00% of 2
+No calls
+
+Function 'councilRoomEffect'
+Lines executed:100.00% of 11
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+No calls
+
+Function 'remodelEffect'
+Lines executed:0.00% of 12
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+No calls
+
+Function 'cardEffect'
+Lines executed:6.05% of 248
+Branches executed:13.29% of 173
+Taken at least once:2.31% of 173
+No calls
+
+Function 'discardCard'
+Lines executed:78.57% of 14
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
+No calls
+
+Function 'gainCard'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+No calls
+
+Function 'updateCoins'
+Lines executed:75.00% of 12
+Branches executed:100.00% of 8
+Taken at least once:75.00% of 8
+No calls
+
+File 'dominion.c'
+Lines executed:27.66% of 640
+Branches executed:28.54% of 417
+Taken at least once:20.38% of 417
+No calls
+dominion.c:creating 'dominion.c.gcov'
+
         -:    0:Source:dominion.c
         -:    0:Graph:dominion.gcno
         -:    0:Data:dominion.gcda
