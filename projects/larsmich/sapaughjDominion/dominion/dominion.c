@@ -1232,7 +1232,7 @@ int smithyEffect(int i, int currentPlayer, int handPos, struct gameState* state)
 		drawCard(currentPlayer, state);
 	}
 	//discard card from hand
-	discardCard(handPos, currentPlayer, state, 1);
+	discardCard(handPos, currentPlayer, state, 0);
 	return 0;
 }
 
